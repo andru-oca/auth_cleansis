@@ -1,0 +1,339 @@
+{% extends 'base_template.html' %}
+{% load static %}
+{% block contenido %}
+
+  <link rel="stylesheet" href="{% static './css/style.css' %}">
+  <link rel="stylesheet" href="{% static './css/escobas.css' %}">
+  <script src="{% static './js/escobas.js' %}"></script>
+  <title>Escobas - Distribuidora Cleansis</title>
+</head>
+
+<body>
+  <header>
+    <section class="section_logo">
+      <div class="logo">
+        <a href="#"></a><img src="{% static './media/logo-modified (1).png' %}" alt="Logo" width="110" height="110" />
+      </div>
+      <div class="search">
+        <input type="search" placeholder="Buscar un producto">
+      </div>
+      <nav>
+        <ul class="iconos1_contacto">
+          <li class="iconos1"><a href="#"><i class="fa-solid fa-phone fa-xl"></i></a></li>
+          <li class="iconos1"><a href="#"><i class="fa-brands fa-whatsapp fa-xl"></i></a></li>
+          <li class="iconos1"><a href="#"><i class="fa-solid fa-cart-shopping fa-xl"></i></a></li>
+        </ul>
+      </nav>
+    </section>
+    <br>
+    <br>
+    <section class="section_productos">
+      <nav class="menu_productos">
+        <ul>
+          <li class="menu_productos"><a href="#"><i class="fa-solid fa-broom fa-l" style="color: #ffffff;">
+                Limpieza</i></a>
+            <ul class="submenu">
+              <li><a href="#">Escobas y Escobillones</a></li>
+              <li><a href="#">Sopapas y Secadores</a></li>
+              <li><a href="#">Cabos y Barrenderos</a></li>
+              <li><a href="#">Palas y Bolsas</a></li>
+              <li><a href="#">Cepillos y Guantes</a></li>
+              <li><a href="#">Baldes y Palanganas</a></li>
+              <li><a href="#">Lampasos</a></li>
+            </ul>
+          </li>
+          <li class="menu_productos"><a href="#"><i class="fa-solid fa-hand-sparkles fa-l" style="color: #ffffff;">
+                Bazar</i></a>
+            <ul class="submenu">
+              <li><a href="#">Accesorios de Cocina</a></li>
+              <li><a href="#">Accesorios de Baño</a></li>
+              <li><a href="#">Accesorios de Hogar</a></li>
+              <li><a href="#">Mascotas</a></li>
+            </ul>
+          </li>
+          <li class="menu_productos"><a href="#"><i class="fa-solid fa-shirt fa-l" style="color: #ffffff;">
+                Textil</i></a>
+            <ul class="submenu">
+              <li><a href="#">Alfombras y Felpudos</a></li>
+              <li><a href="#">Franelas y Microfibras</a></li>
+              <li><a href="#">Regillas y Paños</a></li>
+              <li><a href="#">Trapos de Piso</a></li>
+            </ul>
+          </li>
+          <li class="menu_productos"><a href="#"><i class="fa-solid fa-jug-detergent fa-l" style="color: #ffffff;">
+                Liquidos</i></a>
+            <ul class="submenu">
+              <li><a href="#">Insecticidas</a></li>
+              <li><a href="#">Liq. Limpieza</a></li>
+              <li><a href="#">Cloro Piletas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+  <div class="tituloSec">
+    <h1>Escobas y Escobillones</h1>
+  </div>
+  <main>
+    <div class="container">
+      <section class="producto-conteiner">
+        <article class="producto">
+          <div class="logo-container">
+            <div class="logo-oferta">
+              <img class="imagen" src="{% static './media/icons/icons8-oferta-verde.png' %}" alt="" />
+            </div>
+            <h2 class="margen-corto color-verde">OFERTA</h2>
+          </div>
+          <div class="detalle-producto">
+            <div class="logo-producto">
+              <img class="imagen" src="{% static './media/images/barrendero.png' %}" alt="" />
+            </div>
+            <div class="descripcion">
+              <h4 class="centrado">Azabache Barrendero 8cm</h4>
+              <h5 class="centrado">Ecofibra Cepillo</h5>
+            </div>
+          </div>
+          <div class="precio">
+            <span class="monto"> $449.55 </span>
+            <p class="iva">UNIT + I.V.A</p>
+          </div>
+          <div class="boton">
+            <button class="comprar" onclick="showAlert()">COMPRAR</button>
+          </div>
+        </article>
+        <article class="producto">
+          <div class="detalle-producto">
+            <div class="logo-producto">
+              <img class="imagen" src="{% static './media/images/escobillon-7.5cm.png' %}" alt="" />
+            </div>
+            <div class="descripcion">
+              <h4 class="centrado">perla escobillon 7.5cm</h4>
+              <h5 class="centrado">base plástica</h5>
+            </div>
+          </div>
+          <div class="precio">
+            <span class="monto"> $679.99 </span>
+            <p class="iva">UNIT + I.V.A</p>
+          </div>
+          <div class="boton">
+            <button class="comprar" onclick="showAlert()">COMPRAR</button>
+          </div>
+        </article>
+        <article class="producto">
+          <div class="logo-container">
+            <div class="logo-oferta">
+              <img class="imagen" src="{% static './media/icons/icons8-oferta-verde.png' %}" alt="" />
+            </div>
+            <h2 class="margen-corto color-verde">OFERTA</h2>
+          </div>
+          <div class="detalle-producto">
+            <div class="logo-producto">
+              <img class="imagen" src="{% static './media/images/escobillon-topacio.png' %}" alt="" />
+            </div>
+            <div class="descripcion">
+              <h4 class="centrado">topacio escobillon 10cm</h4>
+              <h5 class="centrado">6 hileras fibra</h5>
+            </div>
+          </div>
+          <div class="precio">
+            <span class="monto"> $449.55 </span>
+            <p class="iva">UNIT + I.V.A</p>
+          </div>
+          <div class="boton">
+            <button class="comprar" onclick="showAlert()">COMPRAR</button>
+          </div>
+        </article>
+        <article class="producto">
+
+          <div class="detalle-producto">
+            <div class="logo-producto">
+              <img class="imagen" src="{% static './media/images/escobillon-8.5cm.png' %}" alt="" />
+            </div>
+            <div class="descripcion">
+              <h4 class="centrado">zafiro escobillon 8.5cm</h4>
+              <h5 class="centrado">base plástica</h5>
+            </div>
+          </div>
+          <div class="precio">
+            <span class="monto"> $785.55 </span>
+            <p class="iva">UNIT + I.V.A</p>
+          </div>
+          <div class="boton">
+            <button class="comprar" onclick="showAlert()">COMPRAR</button>
+          </div>
+        </article>
+      </section>
+      <section class="producto-conteiner">
+        <article class="producto">
+          <div class="detalle-producto">
+            <div class="logo-producto">
+              <img class="imagen" src="{% static './media/images/escobillon-10cm.png' %}" alt="" />
+            </div>
+            <div class="descripcion">
+              <h4 class="centrado">optimus escobillon 10cm</h4>
+              <h5 class="centrado">base plástica</h5>
+            </div>
+          </div>
+          <div class="precio">
+            <span class="monto"> $999.55 </span>
+            <p class="iva">UNIT + I.V.A</p>
+          </div>
+          <div class="boton">
+            <button class="comprar" onclick="showAlert()">COMPRAR</button>
+          </div>
+        </article>
+        <article class="producto">
+          <div class="logo-container">
+            <div class="logo-oferta">
+              <img class="imagen" src="{% static './media/icons/icons8-oferta-verde.png' %}" alt="" />
+            </div>
+            <h2 class="margen-corto color-verde">OFERTA</h2>
+          </div>
+          <div class="detalle-producto">
+            <div class="logo-producto">
+              <img class="imagen" src="./{% static './media/images/escobillon-ambar.png' %}" alt="" />
+            </div>
+            <div class="descripcion">
+              <h4 class="centrado">ambar escobillon 8.5cm</h4>
+              <h5 class="centrado">6 Hileras Fibra</h5>
+            </div>
+          </div>
+          <div class="precio">
+            <span class="monto"> $449.55 </span>
+            <p class="iva">UNIT + I.V.A</p>
+          </div>
+          <div class="boton">
+            <button class="comprar" onclick="showAlert()">COMPRAR</button>
+          </div>
+        </article>
+        <article class="producto">
+          <div class="logo-container">
+          </div>
+          <div class="detalle-producto">
+            <div class="logo-producto">
+              <img class="imagen" src="{% static './media/images/caliza-8.5.png' %}" alt="" />
+            </div>
+            <div class="descripcion">
+              <h4 class="centrado">Caliza Escobillon 8.5cm</h4>
+              <h5 class="centrado">Institucional</h5>
+            </div>
+          </div>
+          <div class="precio">
+            <span class="monto"> $685.99 </span>
+            <p class="iva">UNIT + I.V.A</p>
+          </div>
+          <div class="boton">
+            <button class="comprar" onclick="showAlert()">COMPRAR</button>
+          </div>
+        </article>
+        <article class="producto">
+          <div class="detalle-producto">
+            <div class="logo-producto">
+              <img class="imagen" src="{% static './media/images/coral-10cm.png' %}" alt="" />
+            </div>
+            <div class="descripcion">
+              <h4 class="centrado">coral escobillon 10cm</h4>
+              <h5 class="centrado">institucional</h5>
+            </div>
+          </div>
+          <div class="precio">
+            <span class="monto"> $749.99 </span>
+            <p class="iva">UNIT + I.V.A</p>
+          </div>
+          <div class="boton">
+            <button class="comprar" onclick="showAlert()">COMPRAR</button>
+          </div>
+        </article>
+      </section>
+      <section class="acciones-container">
+        <article class="acciones">
+          <div class="icon">
+            <img class="imagen" src="{% static './media/icons/info-svgrepo-com.svg' %}" alt="">
+          </div>
+          <div class="icon-titulo">
+            <h5 class="centrado">Preguntas</h5>
+            <h3 class="centrado fuente-xl">Frecuentes</h3>
+          </div>
+        </article>
+        <article class="acciones">
+          <div class="icon">
+            <img class="imagen" src="{% static './media/icons/delivery-svgrepo-com.svg' %}" alt="">
+          </div>
+          <div class="icon-titulo">
+            <h5 class="centrado">Envíos a todo</h5>
+            <h3 class="centrado fuente-xl">El Pais</h3>
+          </div>
+        </article>
+        <article class="acciones">
+          <div class="icon">
+            <img class="imagen" src="{% static './media/icons/icons8-registro-96.png' %}" alt="">
+          </div>
+          <div class="icon-titulo">
+            <h5 class="centrado">alta como</h5>
+            <h3 class="centrado fuente-xl">cliente</h3>
+          </div>
+        </article>
+        <article class="acciones">
+          <div class="icon">
+            <img class="imagen" src="{% static './media/icons/tag-price-svgrepo-com.svg' %}" alt="">
+          </div>
+          <div class="icon-titulo">
+            <h5 class="centrado">lista de</h5>
+            <h3 class="centrado fuente-xl">precios</h3>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+
+        <div class="footer-links">
+          <h4>COMPAÑIA</h4>
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-phone"></i> Teléfono: 011 4444 4444</a></li>
+            <li><a href="#"><i class="fa-brands fa-whatsapp"></i> Whatsapp: +54 9 11 5144-6970</a></li>
+            <li><a href="#"><i class="fa-regular fa-clock"></i> Horario de atención: Lun. a Vie. de 10 a 13
+                hs. y de 15 a 19 hs. Sáb. de 10 a 13 hs.</a></li>
+            <li><a href="#"><i class="fa-solid fa-location-dot"></i> Domicilio: Angel Gallardo 1075 (1405),
+                Caba, Bs. As.</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>CONTENIDO</h4>
+          <ul>
+            <li><a href="#"> Preguntas Frecuentes</a></li>
+            <li><a href="#">Compras</a></li>
+            <li><a href="#">Envíos</a></li>
+            <li><a href="#">Contacto</a></li>
+
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>SUMATE</h4>
+          <p class="CV">Si estás interesado en formar parte de nuestro Staff envianos tus datos y adjuntá tu
+            CV. </p>
+          <a class="Btn-CV" href="#" target="blank"> Sumarme </a>
+
+
+        </div>
+        <div class="footer-links">
+          <h4>SIGUENOS</h4>
+          <div class="social-link">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+
+        </div>
+        <div class="Derechos">
+          <small>&copy2023 <b>Cleansis</b> - Todos los Derechos Reservados. Política de Privacidad</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+  {% endblock %}

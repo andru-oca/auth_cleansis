@@ -1,0 +1,185 @@
+{% extends 'base_template.html' %}
+{% load static %}
+{% block contenido %}
+
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+	<link rel="stylesheet" href="{% static './css/contacto-styles.css' %}">
+	<title>Distribuidora Cleansis Contacto</title>
+
+</head>
+
+<body>
+
+	<header>
+		<section class="section_logo">
+			<a href="{% url 'index' %}" class="logo">
+				<img src="{% static './media/logo-modified (1).png' %}" alt="Logo" width="110" height="110" />
+			</a>
+			<div class="search">
+				<input type="search" placeholder="Buscar un producto">
+			</div>
+			<nav>
+				<ul class="iconos1_contacto">
+					<li class="iconos1"><a href="#"><i class="fa-solid fa-phone fa-xl"></i></a></li>
+					<li class="iconos1"><a href="#"><i class="fa-brands fa-whatsapp fa-xl"></i></a></li>
+					<li class="iconos1"><a href="#"><i class="fa-solid fa-cart-shopping fa-xl"></i></a></li>
+				</ul>
+			</nav>
+		</section>
+		<br>
+		<br>
+		<section class="section_productos">
+			<nav class="menu_productos">
+				<ul>
+					<li class="menu_productos"><a href="#"><i class="fa-solid fa-broom fa-l" style="color: #ffffff;">
+								Limpieza</i></a>
+						<ul class="submenu">
+							<li><a href="/escobas.html">Escobas y Escobillones</a></li>
+							<li><a href="/secadores.html">Sopapas y Secadores</a></li>
+							<li><a href="#">Cabos y Barrenderos</a></li>
+							<li><a href="#">Palas y Bolsas</a></li>
+							<li><a href="#">Cepillos y Guantes</a></li>
+							<li><a href="#">Baldes y Palanganas</a></li>
+							<li><a href="#">Lampasos</a></li>
+						</ul>
+					</li>
+					<li class="menu_productos"><a href="#"><i class="fa-solid fa-hand-sparkles fa-l" style="color: #ffffff;">
+								Bazar</i></a>
+						<ul class="submenu">
+							<li><a href="#">Accesorios de Cocina</a></li>
+							<li><a href="#">Accesorios de Baño</a></li>
+							<li><a href="#">Accesorios de Hogar</a></li>
+							<li><a href="#">Mascotas</a></li>
+						</ul>
+					</li>
+					<li class="menu_productos"><a href="#"><i class="fa-solid fa-shirt fa-l" style="color: #ffffff;">
+								Textil</i></a>
+						<ul class="submenu">
+							<li><a href="#">Alfombras y Felpudos</a></li>
+							<li><a href="#">Franelas y Microfibras</a></li>
+							<li><a href="#">Regillas y Paños</a></li>
+							<li><a href="#">Trapos de Piso</a></li>
+						</ul>
+					</li>
+					<li class="menu_productos"><a href="#"><i class="fa-solid fa-jug-detergent fa-l" style="color: #ffffff;">
+								Liquidos</i></a>
+						<ul class="submenu">
+							<li><a href="#">Insecticidas</a></li>
+							<li><a href="#">Liq. Limpieza</a></li>
+							<li><a href="#">Cloro Piletas</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</section>
+	</header>
+	<main>
+		<!-- main contacto -->
+		<section class="contact">
+			<div class="u-wrapper">
+				<div class="contact-content">
+					<form id="form" action="" class="form">
+						<h2>Dejanos tu mensaje</h2>
+						<h3>¿En qué podemos ayudarte?</h3>
+						<label for="name">Nombre Completo <span>*</span></label>
+						<input name="name" required type="text" id="name" placeholder="Nombre">
+						<label for="email">Correo electrónico <span>*</span></label>
+						<input name="email" type="text" id="email" required placeholder="email@gmail.com">
+						<label for="message">Mensaje</label>
+						<textarea id="message" name="message" id="" cols="30" rows="10"></textarea>
+						<button type="submit" class="btn primary full">enviar mensaje</button>
+					</form>
+					<a href="mailto:distribuidoracleansis@gmail.com" id="trucazo"></a>
+				</div>
+			</div>
+		</section>
+		<!-- javascrip -->
+		<script>
+			const $form = document.querySelector('#form')
+			const $buttonMailto = document.querySelector('#trucazo')
+			$form.addEventListener('submit', handleSubmit)
+			function handleSubmit(event) {
+				event.preventDefault()
+				const form = new FormData(this)
+				console.log(form.get('name'))
+				$buttonMailto.setAttribute('href', `mailto:distribuidoracleansis@gmail.com?subject=  nombre ${form.get('name')}  correo ${form.get('email')}  &body=${form.get('message')}`)
+				$buttonMailto.click()
+			}
+		</script>
+		<section class="mapa">
+			<div>
+				<h2>Nuestra sucursal</h2>
+			</div>
+			<div class="mapa_google">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.887599704989!2d-58.447683425633684!3d-34.60700365766938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca123d58364b%3A0x887a454be9afc68a!2sAv.%20Angel%20Gallardo%201075%2C%20C1405DJK%20CABA!5e0!3m2!1sen!2sar!4v1698509293763!5m2!1sen!2sar"
+					width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+			<div class="mapa_info">
+				<ul>
+					<li><a href="#"><i class="fa-solid fa-phone"></i> Teléfono: 011 4444 4444</a></li>
+					<li><a href="#"><i class="fa-brands fa-whatsapp"></i> Whatsapp: +54 9 11 5144-6970</a></li>
+					<li><a href="#"><i class="fa-regular fa-clock"></i> Horario de atención: Lun. a Vie. de 10 a 13 hs.
+							y de 15 a 19 hs. Sáb. de 10 a 13 hs.</a></li>
+					<li><a href="#"><i class="fa-solid fa-location-dot"></i> Domicilio: Angel Gallardo 1075 (1405),
+							Caba, Bs. As.</a></li>
+				</ul>
+			</div>
+
+		</section>
+
+
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-row">
+
+				<div class="footer-links">
+					<h4>COMPAÑIA</h4>
+					<ul>
+						<li><a href="#"><i class="fa-solid fa-phone"></i> Teléfono: 011 4444 4444</a></li>
+						<li><a href="#"><i class="fa-brands fa-whatsapp"></i> Whatsapp: +54 9 11 5144-6970</a></li>
+						<li><a href="#"><i class="fa-regular fa-clock"></i> Horario de atención: Lun. a Vie. de 10 a 13
+								hs. y de 15 a 19 hs. Sáb. de 10 a 13 hs.</a></li>
+						<li><a href="#"><i class="fa-solid fa-location-dot"></i> Domicilio: Angel Gallardo 1075 (1405),
+								Caba, Bs. As.</a></li>
+					</ul>
+				</div>
+				<div class="footer-links">
+					<h4>CONTENIDO</h4>
+					<ul>
+						<li><a href="#"> Preguntas Frecuentes</a></li>
+						<li><a href="#">Compras</a></li>
+						<li><a href="#">Envíos</a></li>
+						<li><a href="{% url 'contacto' %}">Contacto</a></li>
+
+					</ul>
+				</div>
+
+				<div class="footer-links">
+					<h4>SUMATE</h4>
+					<p class="CV">Si estás interesado en formar parte de nuestro Staff envianos tus datos y adjuntá tu
+						CV. </p>
+					<a class="Btn-CV" href="{% url 'contacto' %}" target="blank"> Sumarme </a>
+
+
+				</div>
+				<div class="footer-links">
+					<h4>SIGUENOS</h4>
+					<div class="social-link">
+						<a href="#"><i class="fab fa-facebook-f"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
+						<a href="#"><i class="fab fa-twitter"></i></a>
+						<a href="#"><i class="fab fa-linkedin"></i></a>
+					</div>
+
+				</div>
+				<div class="Derechos">
+					<small>&copy2023 <b>Cleansis</b> - Todos los Derechos Reservados. Política de Privacidad</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	{% endblock %}

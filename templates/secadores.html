@@ -1,0 +1,387 @@
+{% extends 'base_template.html' %}
+{% load static %}
+{% block contenido %}
+
+
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+    <link rel="stylesheet" href="{% static './css/secadores.css' %}">
+	<script src="{% static './js/secadores.js' %}"></script>
+	<title>Secadores - Distribuidora Cleansis</title>
+</head>
+
+<body>
+	<header>
+		<!--  Nav 1 Logo   -->
+		<section class="section_logo">
+			<a href="{% url 'index' %}l" class="logo">
+				<img src="{% static './media/logo-modified (1).png' %}" alt="Logo temporal" width="110" height="110" />
+			</a>
+
+			<!-- Buscador -->
+			<div class="search">
+				<input type="search" placeholder="Busca un producto">
+			</div>
+
+			<nav>
+				<ul class="iconos1_contacto">
+					<!-- Iconos1 ref a iconos de contacto -->
+					<!-- el icono de teléfono no lleva a ninguna parte (propongo página de contacto) -->
+					<li class="iconos1">
+						<i class="fa-solid fa-phone fa-xl"></i><a href="#"></a>
+					</li>
+					<li class="iconos1">
+						<i class="fa-brands fa-whatsapp fa-xl"></i><a
+							href="https://api.whatsapp.com/send/?phone=5491151446970&text&type=phone_number&app_absent=0"></a>
+					</li>
+					<!-- el icono de email lleva a la página de contacto -->
+					<li class="iconos1">
+						<i class="fa-regular fa-envelope fa-xl"></i><a href="#"></a>
+					</li>
+					<!-- el icono de carrito lleva al fomulario de registro de usuario -->
+					<li class="iconos1">
+						<i class="fa-solid fa-cart-shopping fa-xl"></i><a href="#"></a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+
+		<br>
+		<br>
+		<!--  Nav 2 Productos   -->
+		<section class="section_productos">
+			<nav class="menu_productos">
+				<ul>
+					<li class="menu_productos">
+						<a href="#"><i class="fa-solid fa-broom" style="color: #ffffff;"> Limpieza</i></a>
+						<ul class="submenu">
+							<li>
+								<a href="{% url 'escobas' %}">Escobas y Escobillones</a>
+							</li>
+							<li>
+								<a href="{% url 'secadores' %}">Sopapas y Secadores</a>
+							</li>
+							<li>
+								<a href="#">Cabos y Barrenderos</a>
+							</li>
+							<li>
+								<a href="#">Palas y Bolsas</a>
+							</li>
+							<li>
+								<a href="#">Cepillos y Guantes</a>
+							</li>
+							<li>
+								<a href="#">Baldes y Palanganas</a>
+							</li>
+							<li>
+								<a href="#">Lampasos</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu_productos">
+						<a href="#"><i class="fa-solid fa-hand-sparkles" style="color: #ffffff;"> Bazar</i></a>
+						<ul class="submenu">
+							<li>
+								<a href="#">Accesorios de Cocina</a>
+							</li>
+							<li>
+								<a href="#">Accesorios de Baño</a>
+							</li>
+							<li>
+								<a href="#">Accesorios de Hogar</a>
+							</li>
+							<li>
+								<a href="#">Mascotas</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu_productos">
+						<a href="#"><i class="fa-solid fa-shirt" style="color: #ffffff;"> Textil</i></a>
+						<ul class="submenu">
+							<li>
+								<a href="#">Alfombras y Felpudos</a>
+							</li>
+							<li>
+								<a href="#">Franelas y Microfibras</a>
+							</li>
+							<li>
+								<a href="#">Regillas y Paños</a>
+							</li>
+							<li>
+								<a href="#">Trapos de Piso</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu_productos">
+						<a href="#"><i class="fa-solid fa-jug-detergent" style="color: #ffffff;"> Liquidos</i></a>
+						<ul class="submenu">
+							<li>
+								<a href="#">Insecticidas</a>
+							</li>
+							<li>
+								<a href="#">Liq. Limpieza</a>
+							</li>
+							<li>
+								<a href="#">Cloro Piletas</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</section>
+	</header>
+	<div class="tituloSec">
+		<h1>Sopapas y secadores</h1>
+	</div>
+	<main>
+		<div class="container">
+			<section class="producto-conteiner">
+
+				<article class="producto">
+
+					<div class="detalle-producto">
+						<div class="logo-producto">
+							<img class="imagen" src="{% static './media/secadores/secador1.png' %}" alt="" />
+						</div>
+						<div class="descripcion">
+							<h4 class="centrado">Secador aluminio reforz x 52cm</h4>
+							<h5 class="centrado">Eterno recambiable</h5>
+						</div>
+					</div>
+					<div class="precio">
+						<span class="monto"> $799.99 </span>
+						<p class="iva">UNIT + I.V.A</p>
+					</div>
+					<div class="boton">
+						<button class="comprar" onclick="showAlert()">COMPRAR</button>
+					</div>
+				</article>
+				<article class="producto">
+
+					<div class="detalle-producto">
+						<div class="logo-producto">
+							<img class="imagen" src="{% static './media/secadores/secador2.png' %}" alt="" />
+						</div>
+						<div class="descripcion">
+							<h4 class="centrado">Secador aluminio reforz x 80cm</h4>
+							<h5 class="centrado">Eterno recambiable</h5>
+						</div>
+					</div>
+					<div class="precio">
+						<span class="monto"> $999.99 </span>
+						<p class="iva">UNIT + I.V.A</p>
+					</div>
+					<div class="boton">
+						<button class="comprar" onclick="showAlert()">COMPRAR</button>
+					</div>
+				</article>
+				<article class="producto">
+					<div class="detalle-producto">
+						<div class="logo-producto">
+							<img class="imagen" src="{% static './media/secadores/respuesto secador.png' %}" alt="" />
+						</div>
+						<div class="descripcion">
+							<h4 class="centrado">Goma secador aluminio x 100cm</h4>
+							<h5 class="centrado">Repuesto</h5>
+						</div>
+					</div>
+					<div class="precio">
+						<span class="monto"> $499.99 </span>
+						<p class="iva">UNIT + I.V.A</p>
+					</div>
+					<div class="boton">
+						<button class="comprar" onclick="showAlert()">COMPRAR</button>
+					</div>
+				</article>
+				<article class="producto">
+
+					<div class="detalle-producto">
+						<div class="logo-producto">
+							<img class="imagen" src="{% static './media/secadores/secador3.png' %}" alt="" />
+						</div>
+						<div class="descripcion">
+							<h4 class="centrado">Secador rojo x 80cm</h4>
+							<h5 class="centrado">Industrial</h5>
+						</div>
+					</div>
+					<div class="precio">
+						<span class="monto"> $399.99 </span>
+						<p class="iva">UNIT + I.V.A</p>
+					</div>
+					<div class="boton">
+						<button class="comprar" onclick="showAlert()">COMPRAR</button>
+					</div>
+				</article>
+
+			</section>
+			<section class="producto-conteiner">
+				<article class="producto">
+
+					<div class="detalle-producto">
+						<div class="logo-producto">
+							<img class="imagen" src="{% static './media/secadores/secador4.png' %}" alt="" />
+						</div>
+						<div class="descripcion">
+							<h4 class="centrado">Secador blanco x 40cm</h4>
+							<h5 class="centrado">Con rosca</h5>
+						</div>
+					</div>
+					<div class="precio">
+						<span class="monto"> $299.99 </span>
+						<p class="iva">UNIT + I.V.A</p>
+					</div>
+					<div class="boton">
+						<button class="comprar" onclick="showAlert()">COMPRAR</button>
+					</div>
+				</article>
+				<article class="producto">
+					<div class="detalle-producto">
+						<div class="logo-producto">
+							<img class="imagen" src="{% static './media/secadores/secador5.png' %}" alt="" />
+						</div>
+						<div class="descripcion">
+							<h4 class="centrado">Secador goma blanco x 50cm</h4>
+							<h5 class="centrado">Industrial reforzado</h5>
+						</div>
+					</div>
+					<div class="precio">
+						<span class="monto"> $789.99 </span>
+						<p class="iva">UNIT + I.V.A</p>
+					</div>
+					<div class="boton">
+						<button class="comprar" onclick="showAlert()">COMPRAR</button>
+					</div>
+				</article>
+				<article class="producto">
+					<div class="logo-container">
+
+					</div>
+					<div class="detalle-producto">
+						<div class="logo-producto">
+							<img class="imagen" src="{% static './media/secadores/sopapa1.png' %}" alt="" />
+						</div>
+						<div class="descripcion">
+							<h4 class="centrado">Sopapa acordeon</h4>
+							<h5 class="centrado">Con cabo</h5>
+						</div>
+					</div>
+					<div class="precio">
+						<span class="monto"> $585.99 </span>
+						<p class="iva">UNIT + I.V.A</p>
+					</div>
+					<div class="boton">
+						<button class="comprar" onclick="showAlert()">COMPRAR</button>
+					</div>
+				</article>
+				<article class="producto">
+
+					<div class="detalle-producto">
+						<div class="logo-producto">
+							<img class="imagen" src="{% static './media/secadores/sopapa2.png' %}" alt="" />
+						</div>
+						<div class="descripcion">
+							<h4 class="centrado">Sopapita floppy</h4>
+							<h5 class="centrado">Con manilla</h5>
+						</div>
+					</div>
+					<div class="precio">
+						<span class="monto"> $349.99 </span>
+						<p class="iva">UNIT + I.V.A</p>
+					</div>
+					<div class="boton">
+						<button class="comprar" onclick="showAlert()">COMPRAR</button>
+					</div>
+				</article>
+			</section>
+			<section class="acciones-container">
+				<a href="#" class="acciones">
+					<div class="icon">
+						<img class="imagen" src="{% static './media/icons/info-svgrepo-com.svg' %}" alt="">
+					</div>
+					<div class="icon-titulo">
+						<h5 class="centrado">Preguntas</h5>
+						<h3 class="centrado fuente-xl">Frecuentes</h3>
+					</div>
+				</a>
+				<a href="#" class="acciones">
+					<div class="icon">
+						<img class="imagen" src="{% static './media/icons/delivery-svgrepo-com.svg' %}" alt="">
+					</div>
+					<div class="icon-titulo">
+						<h5 class="centrado">Envíos a todo</h5>
+						<h3 class="centrado fuente-xl">El Pais</h3>
+					</div>
+				</a>
+				<a href="{% url 'contacto' %}l" class="acciones">
+					<div class="icon">
+						<img class="imagen" src="{% static './media/icons/icons8-registro-96.png' %}" alt="">
+					</div>
+					<div class="icon-titulo">
+						<h5 class="centrado">alta como</h5>
+						<h3 class="centrado fuente-xl">cliente</h3>
+					</div>
+				</a>
+				<a href="#" class="acciones">
+					<div class="icon">
+						<img class="imagen" src="{% static './media/icons/tag-price-svgrepo-com.svg' %}" alt="">
+					</div>
+					<div class="icon-titulo">
+						<h5 class="centrado">lista de</h5>
+						<h3 class="centrado fuente-xl">precios</h3>
+					</div>
+				</a>
+			</section>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-row">
+
+				<div class="footer-links">
+					<h4>COMPAÑIA</h4>
+					<ul>
+						<li><a href="#"><i class="fa-solid fa-phone"></i> Teléfono: 011 4444 4444</a></li>
+						<li><a href="#"><i class="fa-brands fa-whatsapp"></i> Whatsapp: +54 9 11 5144-6970</a></li>
+						<li><a href="#"><i class="fa-regular fa-clock"></i> Horario de atención: Lun. a Vie. de 10 a 13
+								hs. y de 15 a 19 hs. Sáb. de 10 a 13 hs.</a></li>
+						<li><a href="#"><i class="fa-solid fa-location-dot"></i> Domicilio: Angel Gallardo 1075 (1405),
+								Caba, Bs. As.</a></li>
+					</ul>
+				</div>
+				<div class="footer-links">
+					<h4>CONTENIDO</h4>
+					<ul>
+						<li><a href="#"> Preguntas Frecuentes</a></li>
+						<li><a href="#">Compras</a></li>
+						<li><a href="#">Envíos</a></li>
+						<li><a href="{% url 'contacto' %}">Contacto</a></li>
+
+					</ul>
+				</div>
+
+				<div class="footer-links">
+					<h4>SUMATE</h4>
+					<p class="CV">Si estás interesado en formar parte de nuestro Staff envianos tus datos y adjuntá tu
+						CV. </p>
+					<a class="Btn-CV" href="{% url 'contacto' %}" target="blank"> Sumarme </a>
+
+
+				</div>
+				<div class="footer-links">
+					<h4>SIGUENOS</h4>
+					<div class="social-link">
+						<a href="#"><i class="fab fa-facebook-f"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
+						<a href="#"><i class="fab fa-twitter"></i></a>
+						<a href="#"><i class="fab fa-linkedin"></i></a>
+					</div>
+
+				</div>
+				<div class="Derechos">
+					<small>&copy2023 <b>Cleansis</b> - Todos los Derechos Reservados. Política de Privacidad</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+	{% endblock %}
+
+
